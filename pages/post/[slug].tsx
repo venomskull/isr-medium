@@ -87,9 +87,12 @@ function Post({ post }: Props) {
                         className="my-10 mx-auto flex max-w-2xl flex-col p-5"
                         onSubmit={handleSubmit(submit)}
                     >
-                        <input type="hidden" value={post._id} name="_id"
+                        <input type="hidden"
                             {...register("_id")}
+                            name="_id"
+                            value={post._id}
                         />
+
                         <label className="mb-5 block">
                             <span className="text-gray-700">Name</span>
                             <input
